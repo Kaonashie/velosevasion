@@ -9,7 +9,11 @@
 
 <body>
     <main>
-        <div style="display: flex; justify-content: center; align-items: center;">
+        <div class="main-container">
+            <embed class="main-image" src="assets/image01.jpg" type="image/jpg">   
+        </div>
+        <div class="main-container">
+            <embed class="main-image" src="assets/image02.jpg" type="image/jpg">
         </div>
     </main>
 </body>
@@ -17,6 +21,11 @@
 </html>
 
 <style>
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .main-image {
     max-width: 80%;
 }
