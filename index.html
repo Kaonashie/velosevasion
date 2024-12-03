@@ -5,20 +5,80 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VélosEvasionNature</title>
+    <script src=" https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js "></script>
+    <link href=" https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css " rel="stylesheet">
 </head>
 
-<body>
-    <main>
-        <div class="main-container">
-            <embed class="main-image" src="assets/image01.jpg" type="image/jpg">   
-        </div>
-        <div class="main-container">
-            <embed class="main-image" src="assets/image02.jpg" type="image/jpg">
-        </div>
-    </main>
-</body>
+    <body>
+        <!-- <main>
+            <div class="main-container">
+                <embed class="main-image" src="assets/image01.jpg" type="image/jpg">   
+            </div>
+            <div class="main-container">
+                <embed class="main-image" src="assets/image02.jpg" type="image/jpg">
+            </div>
+        </main> -->
 
+        <div class="splide">
+            <div class="splide__track">
+                <div class="splide__list">
+                    <div class="splide__slide">
+                        <img src="assets/image00.jpg" alt="image00">
+                    </div>
+                    <div class="splide__slide">
+                        <img src="assets/image01.jpg" alt="image01">
+                    </div>
+                    <div class="splide__slide">
+                        <img src="assets/image02.jpg" alt="image02">
+                    </div>
+                    <div class="splide__slide">
+                        <img src="assets/image03.jpg" alt="image03">
+                    </div>
+                    <div class="splide__slide">
+                        <img src="assets/image04.jpg" alt="image04">
+                    </div>
+                    <div class="splide__slide">
+                        <img src="assets/image05.jpg" alt="image05">
+                    </div>
+                    <div class="splide__slide">
+                        <img src="assets/image06.jpg" alt="image06">
+                    </div>
+                    <div class="splide__slide">
+                        <img src="assets/image07.jpg" alt="image07">
+                    </div>
+                    <div class="splide__slide">
+                        <img src="assets/image08.jpg" alt="image08">
+                    </div>
+                    <div class="splide__slide">
+                        <img src="assets/image09.jpg" alt="image09">
+                    </div>
+                    <div class="splide__slide">
+                        <img src="assets/image10.jpg" alt="image10">
+                    </div>
+                    <div class="splide__slide">
+                        <img src="assets/image11.jpg" alt="image11">
+                    </div>
+
+                </div>
+            </div>
+
+
+</body>
 </html>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var splide = new Splide('.splide', {
+            direction: 'ttb',
+            height: '100vh',
+            wheel: false,
+            arrows: false,
+            autoWidth: false,
+            focus: 'center',
+            perPage: 1
+        });
+        splide.mount();
+    });
+</script>
 
 <style>
 .main-container {
@@ -26,7 +86,60 @@
     justify-content: center;
     align-items: center;
 }
+
 .main-image {
     max-width: 80%;
+}
+
+.splide {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.splide__track {
+    width: 100%;
+}
+
+.splide__list {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.splide__slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.splide__slide img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .splide__list {
+        justify-content: center;
+    }
+    
+    .splide__slide {
+        justify-content: center;
+        padding: 0;
+    }
+    
+    .splide__slide img {
+        width: 100%;
+        height: auto;
+    }
 }
 </style>
